@@ -64,11 +64,11 @@ And this is only for segmentation using the trained model.
 
 5. Run python script to calculate wound area
 
-~bash
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ bash
 python area_image.py
-~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Note: Change the Parameters `path_img` and `output_path` in order to calculate the area of your custom image.
+Note: Change the Parameters `path_img` and `output_path` in area_image.py in order to calculate the area of your custom image.
 
  
 
@@ -95,14 +95,13 @@ images.
 
 Here is one example of segmentation of an image from the test dataset:
 
-![Wound and Reference segmentation of a test
-image](./runs/segment/predict3/JOSE EMILIOIMG1435.jpg)
+![Training Results](./runs/segment/predict3/JOSE_EMILIOIMG1435.jpg)
 
  
 
 Also, here are the results from final training:
 
-![Training Results](./runs/detect/train/results.png)
+![Training Results](./runs/segment/train3/results.png)
 
  
 
@@ -110,9 +109,11 @@ Retraining the Model
 --------------------
 
 In order to retrain the model, you can use pre-trained weights `best.pt` from train1 or train3 model.
+
 The first training, train1, was done only on wound class and there was no reference class.
 The last training, train3, was done on top of first training with both wound and reference classes in training set.
-Further information for training a YOLOv8 segmentation model can be found on Ultralytics website [here](https://docs.ultralytics.com/tasks/segment)
+
+Further information for training a YOLOv8 segmentation model can be found on Ultralytics website [here](https://docs.ultralytics.com/tasks/segment).
 
  
 
