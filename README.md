@@ -103,6 +103,11 @@ Also, here are the results from final training:
 
 ![Training Results](./runs/segment/train3/results.png)
 
+
+Here is the output image after calculating the area using python script:
+
+![Training Results](./images/output/JOSE_EMILIOIMG1435_annotated.jpg)
+
  
 
 Retraining the Model
