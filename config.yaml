@@ -1,0 +1,11 @@
+path: /content/gdrive/My Drive/thesis/data/
+train: images/train 
+val: images/val  
+
+nc: 2
+names: ['reference', 'wound']
+
+# Data augmentation settings
+# augment: true
+# random_crop: true
+# random_flip: true
