@@ -59,7 +59,7 @@ pip install -r requirements.txt
 yolo segment predict model=segment_v3.pt source="images/test" conf=0.75
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Note: change the path of `source` in above line to your image-dataset to test.
+*Note:* change the path of `source` in above line to your image-dataset to test.
 And this is only for segmentation using the trained model.
 
 5. Run the live segmentation using your webcam
@@ -67,6 +67,10 @@ And this is only for segmentation using the trained model.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ bash
 yolo segment predict model=segment_v3.pt source=0 show=True save=False conf=0.75
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*Note:* `source=0` here means it takes your camera as input and shows live video feed. 
+`show=True` displays the live detection, and turning this to False will not display any video feed.
+`save=False` is used to not save the whole live video. If you want the full video to be saved to your system, then change this to True.
 
 
 6. Run python script to calculate wound area
