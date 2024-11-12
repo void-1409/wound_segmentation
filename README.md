@@ -56,19 +56,26 @@ pip install -r requirements.txt
 4.  Run the segmentation
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ bash
-yolo segment predict model=segment_v3.pt source="images/test"
+yolo segment predict model=segment_v3.pt source="images/test" conf=0.75
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Note: change the path of `source` in above line to your image-dataset to test.
 And this is only for segmentation using the trained model.
 
-5. Run python script to calculate wound area
+5. Run the live segmentation using your webcam
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ bash
+yolo segment predict model=segment_v3.pt source=0 show=True save=False conf=0.75
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+6. Run python script to calculate wound area
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ bash
 python area_image.py
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Note: Change the Parameters `path_img` and `output_path` in area_image.py in order to calculate the area of your custom image.
+Note: Change the Parameters `path_img` and `output_path` in area_image.py file in order to calculate the area of your custom image.
 
  
 
